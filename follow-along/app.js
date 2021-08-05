@@ -9,7 +9,11 @@ questions.forEach(function(question) {
    // * console.log(btn);
    btn.addEventListener('click', function(){ 
       
-      
+      questions.forEach(function(thing){
+         if(thing !== question) {
+            thing.classList.add()
+         }
+      });
 
       question.classList.toggle('show-text');
    });
