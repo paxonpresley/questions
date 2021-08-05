@@ -5,11 +5,18 @@ const questions = document.querySelectorAll('.question');
 
 questions.forEach(function(question) {
    // * console.log(question);
-   const btn = question.querySelector('.question-btn');
+   const btn = question.querySelector('.question-btn'); //not using .document bc that selects everything in the doc, insdead use that param so that you only search inside the single article.
    // * console.log(btn);
-   btn.addEventListener('click', function(){
+   btn.addEventListener('click', function(){ 
+      
+      questions.forEach(function(thing){
+         if(thing !== question) {
+            thing.classList.remove('show-text');
+         };
+      });
 
-   })
+      question.classList.toggle('show-text');
+   });
 });
 
 
