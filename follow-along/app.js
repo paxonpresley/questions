@@ -11,8 +11,8 @@ questions.forEach(function(question) {
       
       questions.forEach(function(thing){
          if(thing !== question) {
-            thing.classList.add()
-         }
+            thing.classList.remove('show-text');
+         };
       });
 
       question.classList.toggle('show-text');
